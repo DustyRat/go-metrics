@@ -119,3 +119,8 @@ func (m *Database) Collection(name string, opts ...*options.CollectionOptions) *
 	collection := m.db.Collection(name, opts...)
 	return &Collection{db: m, collection: collection}
 }
+
+// Client returns the Client the Database was created from.
+func (m *Database) Client() *mongo.Client {
+	return m.db.Client()
+}
