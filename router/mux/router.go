@@ -79,7 +79,7 @@ func (r *Router) HandleFuncWithMetrics(path string, f http.HandlerFunc) *mux.Rou
 
 // PathPrefix ...
 func (r *Router) PathPrefix(prefix string) *mux.Route {
-	return r.mux.PathPrefix(prefix)
+	return r.Router.PathPrefix(prefix)
 }
 
 func recovery(h http.Handler) http.Handler {
